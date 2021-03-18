@@ -1,15 +1,16 @@
 #!/usr/bin/env nextflow
 
-cheers = Channel.from 'Bonjour', 'Ciao', 'Hello', 'Hola'
+params.ser = 'Hello'
 
-process sayHello {
+process pipeline {
   echo true
-  input: 
-    val x from cheers
+
+  output:
+
   script:
     """
-    echo '$x world!'
-    sleep 30
+    #!/bin/bash
+    echo 'Executing Source Extration Region: ${params.ser}'
     """
 }
 
