@@ -10,7 +10,7 @@ process pipeline {
   script:
     """
     #!/bin/bash
-    echo 'Executing Source Extration Region: ${params.ser}'
+    echo 'Executing Source Extraction Region: ${params.ser}'
     """
 }
 
